@@ -1,0 +1,66 @@
+======================================================================
+ABLATION STUDY REPORT: SAR-only vs SAR+DEM
+EOS-04 L2B - DEM Feature Ablation
+======================================================================
+
+EXPERIMENTAL DESIGN:
+  Dataset            : IDENTICAL for both models
+  Total patches      : 1000
+  Training patches   : 800
+  Validation patches: 200
+  Train/val split    : seed=42, stratified
+  Architecture       : EfficientNet-B0 + MLP
+  Epochs             : 100 each
+  Only difference    : MLP input feature set
+
+======================================================================
+MODEL A - SAR ONLY
+======================================================================
+  Features: ['mean_r', 'mean_g', 'hh_hv_rat', 'rvi_mean']
+  Best epoch: None
+  Best validation accuracy: 94.00%
+
+  Dense_forest     Precision=0.986  Recall=0.972  F1=0.979  Support=141
+  Mix              Precision=0.853  Recall=0.806  F1=0.829  Support=36
+  Urban            Precision=0.815  Recall=0.957  F1=0.880  Support=23
+
+======================================================================
+MODEL B - SAR + DEM
+======================================================================
+  Features: ['mean_r', 'mean_g', 'hh_hv_rat', 'rvi_mean', 'dem_mean', 'slp_mean', 'slp_std', 'slp_max', 'slp_p15']
+  Best epoch: None
+  Best validation accuracy: 92.00%
+
+  Dense_forest     Precision=0.958  Recall=0.972  F1=0.965  Support=141  F1 difference=-0.014
+  Mix              Precision=0.812  Recall=0.722  F1=0.765  Support=36  F1 difference=-0.064
+  Urban            Precision=0.840  Recall=0.913  F1=0.875  Support=23  F1 difference=-0.005
+
+  Accuracy difference (DEM - SAR): -2.00 percentage points
+
+======================================================================
+McNEMAR'S TEST
+======================================================================
+  Both correct              : 183
+  Only SAR correct          : 5
+  Only DEM correct          : 1
+  Both wrong                : 11
+  Chi2                      : 1.5
+  p-value                   : 0.220671
+  Significant (p<0.05)      : NO
+
+DEM model corrected 1 patches that SAR-only got wrong.
+SAR-only corrected 5 patches that DEM got wrong.
+Net improvement by DEM: -4 patches.
+NOT statistically significant (p>=0.05)
+
+======================================================================
+OUTPUTS
+======================================================================
+  model_A_SAR_only/best_model.pth
+  model_B_SAR_DEM/best_model.pth
+  ablation_training_curves.png
+  ablation_f1_comparison.png
+  ablation_confusion_matrices.png
+  ablation_mcnemar.png
+  ablation_report.txt
+======================================================================

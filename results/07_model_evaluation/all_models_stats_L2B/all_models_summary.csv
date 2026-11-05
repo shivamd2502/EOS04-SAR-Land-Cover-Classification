@@ -1,0 +1,5 @@
+patch_size,label,ground_area,total_patches,train_patches,val_patches,approx_scene_patches,ckpt_val_acc_%,ckpt_epoch,rerun_val_acc_%,weighted_f1,macro_f1,mean_confidence,Dense_forest_precision,Dense_forest_recall,Dense_forest_f1,Dense_forest_support,Mix_precision,Mix_recall,Mix_f1,Mix_support,Urban_precision,Urban_recall,Urban_f1,Urban_support
+64,64×64,1.15km × 1.15km,11663,9330,2333,25440,94.17,34,94.17,0.9415,0.9422,0.8657,0.948,0.959,0.953,992.0,0.923,0.899,0.91,769.0,0.955,0.97,0.963,572.0
+128,128×128,2.30km × 2.30km,3910,3128,782,6320,93.99,22,93.99,0.9393,0.9268,0.8898,0.971,0.976,0.974,417.0,0.933,0.842,0.885,215.0,0.87,0.98,0.922,150.0
+224,224×224,4.03km × 4.03km,1307,1045,262,2025,93.89,72,93.89,0.9383,0.9385,0.8652,0.939,0.969,0.954,128.0,0.935,0.867,0.9,83.0,0.943,0.98,0.962,51.0
+256,256×256,4.61km × 4.61km,999,799,200,1560,94.5,54,94.5,0.9452,0.9498,0.8473,0.949,0.949,0.949,98.0,0.906,0.921,0.913,63.0,1.0,0.974,0.987,39.0

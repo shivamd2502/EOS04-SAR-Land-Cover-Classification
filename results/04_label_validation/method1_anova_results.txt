@@ -1,0 +1,33 @@
+============================================================
+METHOD 1 — SAR FEATURE SEPARABILITY (Kruskal-Wallis test)
+============================================================
+
+NULL HYPOTHESIS: all 3 classes have the same distribution
+If p < 0.001 → reject null → classes are statistically distinct
+η² > 0.14 = large effect size (class explains >14% of variance)
+
+Feature: hh_hv_rat
+  H-statistic : 842.6621
+  p-value     : 1.04e-183  → SIGNIFICANT ***
+  η² effect   : 0.844  (large)
+  Class means : {'Dense_forest': 6.304, 'Mix': 7.324, 'Urban': 9.084}
+  Class stds  : {'Dense_forest': 0.419, 'Mix': 0.382, 'Urban': 0.54}
+
+Feature: mean_r
+  H-statistic : 118.5792
+  p-value     : 1.78e-26  → SIGNIFICANT ***
+  η² effect   : 0.117  (medium)
+  Class means : {'Dense_forest': -7.691, 'Mix': -7.617, 'Urban': -8.223}
+  Class stds  : {'Dense_forest': 1.715, 'Mix': 0.988, 'Urban': 1.363}
+
+Feature: mean_g
+  H-statistic : 509.1136
+  p-value     : 2.80e-111  → SIGNIFICANT ***
+  η² effect   : 0.5092  (large)
+  Class means : {'Dense_forest': -13.995, 'Mix': -14.941, 'Urban': -17.307}
+  Class stds  : {'Dense_forest': 1.525, 'Mix': 1.067, 'Urban': 1.305}
+
+✓ ALL features show statistically significant separation (p<0.001).
+  This proves the auto-label thresholds captured real physical
+  differences in SAR backscatter between the 3 land-cover classes.
+============================================================

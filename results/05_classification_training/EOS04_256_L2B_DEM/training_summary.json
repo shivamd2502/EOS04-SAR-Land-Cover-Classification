@@ -1,0 +1,40 @@
+{
+  "composite": "OPT1_sigma0",
+  "best_epoch": 56,
+  "best_validation_accuracy": 0.935,
+  "best_validation_loss": 0.31455507963895796,
+  "num_total_patches": 1000,
+  "num_train_patches": 800,
+  "num_validation_patches": 200,
+  "class_names": [
+    "Dense_forest",
+    "Mix",
+    "Urban"
+  ],
+  "class_distribution_total": {
+    "Dense_forest": 706,
+    "Mix": 181,
+    "Urban": 113
+  },
+  "auxiliary_features": [
+    "mean_r",
+    "mean_g",
+    "hh_hv_rat",
+    "rvi_mean",
+    "dem_mean",
+    "slp_mean",
+    "slp_std",
+    "slp_max",
+    "slp_p15"
+  ],
+  "raw_to_model_label": {
+    "Hilly": "Dense_forest",
+    "Mix": "Mix",
+    "Urban Dense": "Urban",
+    "Dense_forest": "Dense_forest",
+    "Urban": "Urban"
+  },
+  "best_model": "D:\\ISRO_14\\model\\EOS04_256_L2B_DEM\\best_model.pth",
+  "label_encoder": "D:\\ISRO_14\\model\\EOS04_256_L2B_DEM\\label_encoder.json",
+  "feature_stats": "D:\\ISRO_14\\model\\EOS04_256_L2B_DEM\\feature_stats.json"
+}

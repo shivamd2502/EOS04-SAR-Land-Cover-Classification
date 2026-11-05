@@ -1,22 +1,18 @@
-# Ignore datasets and generated images
-masks_seg/
-patches/
-patches_png/
-processed/
-raw/
-seg_to_label/
+# This folder also holds ~33 GB of SAR data, patches, models and the venv.
+# Whitelist approach: ignore everything at the root, then allow only the repository content.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/requirements.txt
+!/scripts/
+!/results/
+!/docs/
+!/archive/
 
-# Ignore virtual environment
-sar_env/
-
-# Python cache
 __pycache__/
 *.pyc
-
-
-# Jupyter checkpoints
+*.pth
 .ipynb_checkpoints/
-
-# OS files
 Thumbs.db
 .DS_Store

@@ -1,0 +1,101 @@
+========================================================================
+EOS-04 L2B PATCH CLASSIFIER — COMPLETE STATS REPORT
+Composite: OPT1_sigma0   |   Classes: ['Dense_forest', 'Mix', 'Urban']
+========================================================================
+
+PATCH SIZE : 64×64
+  Ground area per patch  : 1.15km × 1.15km
+  Approx patches / scene : 25,440
+  Total labelled patches : 11,663
+  Training patches (80%) : 9,330
+  Validation patches(20%): 2,333
+  Best checkpoint epoch  : 34
+  Checkpoint val_acc     : 94.17%
+  Re-run val_acc         : 94.17%
+  Weighted F1            : 0.9415
+  Macro F1               : 0.9422
+  Mean model confidence  : 0.8657
+
+  Class             Precision   Recall       F1   Support
+  ──────────────────────────────────────────────────────
+  Dense_forest          0.948    0.959    0.953     992.0
+  Mix                   0.923    0.899    0.910     769.0
+  Urban                 0.955    0.970    0.963     572.0
+
+========================================================================
+
+PATCH SIZE : 128×128
+  Ground area per patch  : 2.30km × 2.30km
+  Approx patches / scene : 6,320
+  Total labelled patches : 3,910
+  Training patches (80%) : 3,128
+  Validation patches(20%): 782
+  Best checkpoint epoch  : 22
+  Checkpoint val_acc     : 93.99%
+  Re-run val_acc         : 93.99%
+  Weighted F1            : 0.9393
+  Macro F1               : 0.9268
+  Mean model confidence  : 0.8898
+
+  Class             Precision   Recall       F1   Support
+  ──────────────────────────────────────────────────────
+  Dense_forest          0.971    0.976    0.974     417.0
+  Mix                   0.933    0.842    0.885     215.0
+  Urban                 0.870    0.980    0.922     150.0
+
+========================================================================
+
+PATCH SIZE : 224×224
+  Ground area per patch  : 4.03km × 4.03km
+  Approx patches / scene : 2,025
+  Total labelled patches : 1,307
+  Training patches (80%) : 1,045
+  Validation patches(20%): 262
+  Best checkpoint epoch  : 72
+  Checkpoint val_acc     : 93.89%
+  Re-run val_acc         : 93.89%
+  Weighted F1            : 0.9383
+  Macro F1               : 0.9385
+  Mean model confidence  : 0.8652
+
+  Class             Precision   Recall       F1   Support
+  ──────────────────────────────────────────────────────
+  Dense_forest          0.939    0.969    0.954     128.0
+  Mix                   0.935    0.867    0.900      83.0
+  Urban                 0.943    0.980    0.962      51.0
+
+========================================================================
+
+PATCH SIZE : 256×256
+  Ground area per patch  : 4.61km × 4.61km
+  Approx patches / scene : 1,560
+  Total labelled patches : 999
+  Training patches (80%) : 799
+  Validation patches(20%): 200
+  Best checkpoint epoch  : 54
+  Checkpoint val_acc     : 94.50%
+  Re-run val_acc         : 94.50%
+  Weighted F1            : 0.9452
+  Macro F1               : 0.9498
+  Mean model confidence  : 0.8473
+
+  Class             Precision   Recall       F1   Support
+  ──────────────────────────────────────────────────────
+  Dense_forest          0.949    0.949    0.949      98.0
+  Mix                   0.906    0.921    0.913      63.0
+  Urban                 1.000    0.974    0.987      39.0
+
+========================================================================
+
+SUMMARY — BEST MODEL PER METRIC
+========================================================================
+  Highest val accuracy  : 256×256  (94.50%)
+  Highest weighted F1   : 256×256  (0.9452)
+  Highest confidence    : 128×128  (0.8898)
+
+  NOTE on patch size vs feature quality:
+  • 64×64  → upscale 3.5× to 224: significant feature loss
+  • 128×128→ upscale 1.75×: some blur
+  • 224×224→ NO resize: CNN sees native SAR pixels (best texture)
+  • 256×256→ shrink to 224: slight loss (acceptable)
+========================================================================

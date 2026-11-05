@@ -1,0 +1,17 @@
+QUALITY FILTERING REPORT
+========================================
+Before: 304 patches
+Dropped: 222 patches (flagged low quality)
+After: 82 patches
+
+Before (per class):
+class
+None           133
+Urban Dense    104
+Hills Rural     67
+
+After (per class):
+class
+Urban Dense    76
+None            4
+Hills Rural     2

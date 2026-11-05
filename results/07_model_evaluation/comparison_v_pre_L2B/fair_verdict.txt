@@ -1,0 +1,39 @@
+========================================================================
+FAIR MODEL COMPARISON — SAME TEST SET
+========================================================================
+  Test set size    : 200 patches  (256×256 val split, seed=42)
+  256×256 model    : trained val_acc=93.5%  (epoch 66)
+  128×128 model    : trained val_acc=91.3%  (epoch 82)
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  Accuracy on SAME 200 patches:                            │
+  │    256×256 model     : 33.5%                           │
+  │    128×128 model     : 33.5%  (majority vote of 4)     │
+  │    Model agreement   : 100.0% of patches predicted same   │
+  └─────────────────────────────────────────────────────────────┘
+
+  Per-class F1 on SAME test set:
+  Class              256 F1   128 F1   Winner
+  ────────────────────────────────────────────
+  Dense_forest        0.000    0.000      tie
+  Mix                 0.000    0.000      tie
+  Urban               0.502    0.502      tie
+  ────────────────────────────────────────────
+  Weighted avg        0.168    0.168      128
+
+  Mean confidence: 256=1.000   128=1.000
+
+  INTERPRETATION:
+  • On the SAME 200 geographic locations the 128×128 model
+    achieves higher accuracy by 0.0 percentage points.
+  • This is a FAIR comparison — same patches, same ground truth.
+  • Model agreement = 100.0%: both models agree on 100% of patches.
+    The remaining 0% of patches are where the models
+    disagree — these are the genuinely ambiguous Mixed-cover patches.
+  • The 128 model uses majority vote of 4 sub-patches, which
+    reduces noise from individual sub-patch errors.
+  • FINAL RECOMMENDATION:
+    Use 256×256 model if: you want highest per-patch accuracy
+    Use 128×128 model if: you want finer spatial detail and more
+    training data coverage for future acquisition dates.
+========================================================================

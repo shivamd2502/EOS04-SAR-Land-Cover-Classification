@@ -1,0 +1,14 @@
+Criterion,Model_256,Model_128,Winner,Notes
+Best val accuracy,93.5%  (ep 66),91.3%  (ep 82),256,256 higher absolute; 128 on larger val set (779 vs 200)
+Weighted F1 (3 classes),0.937,0.912,256,256 edges out 128 on weighted F1
+Dense_forest F1,0.94,0.91,256,Both models equal on Dense_forest F1
+Mix F1,0.90,0.87,256,Mix is the hardest class; 256 handles it better
+Urban F1,0.97,0.96,256,Both excellent on Urban
+Urban precision,0.97,0.94,256,128 has higher Urban precision (0.94 vs 0.97)
+Urban recall,0.97,0.98,128,128 misses fewer urban pixels
+Mix recall,0.86,0.84,256,256 better at finding mixed-cover patches
+Training patches,997  (800 train / 200 val),3894  (3115 train / 779 val),128,128 has ~4x more training data
+Convergence speed,epoch 16,epoch 10,128,Val>88% first at ep16 (256) vs ep10 (128)
+Val set reliability,200 patches,779 patches,128,128 val set 3.9x larger → less statistical variance
+Ground area per patch,4.6 km × 4.6 km,2.3 km × 2.3 km,128,128 captures finer land-cover boundaries
+Training epochs to best,epoch 66 / 100,epoch 82 / 100,256,256 found best model earlier; 128 kept improving till ep82

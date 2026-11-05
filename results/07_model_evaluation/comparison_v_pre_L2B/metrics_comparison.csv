@@ -1,0 +1,10 @@
+Class,Metric,Model_256,Model_128,Delta_128_256,Winner
+Dense_forest,Precision,0.9,0.9,0.0,tie
+Dense_forest,Recall,0.97,0.92,-0.05,256
+Dense_forest,F1,0.94,0.91,-0.03,256
+Mix,Precision,0.93,0.9,-0.03,256
+Mix,Recall,0.86,0.84,-0.02,256
+Mix,F1,0.9,0.87,-0.03,256
+Urban,Precision,0.97,0.94,-0.03,256
+Urban,Recall,0.97,0.98,0.01,128
+Urban,F1,0.97,0.96,-0.01,256
