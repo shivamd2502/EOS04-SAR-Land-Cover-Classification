@@ -12,7 +12,7 @@
 #
 # WHAT IT PRODUCED (results/08_segmentation_unet/training/)
 #   Validation mean IoU rises from 0.66 (epoch 1) to about 0.94 (best near epoch 41);
-#   best_unet_eos04_256.pth / final_unet_eos04_256.pth in unet_output_256/.
+#   best_unet_eos04_256.pth / final_unet_eos04_256.pth in data/08_segmentation_unet/unet_output_256/.
 #   CAVEAT: the targets are threshold pseudo-labels, so IoU measures how well the
 #   rule is reproduced, not real land-cover accuracy.
 #   Overview of all steps: README.md and docs/PIPELINE.md
@@ -73,7 +73,7 @@ BASE_DIR = Path(r"D:\ISRO_14")
 
 IMAGE_DIR = (
     BASE_DIR
-    / "seg_masks"
+    / "data" / "08_segmentation_unet" / "seg_masks"
     / "03JUN2026"
     / "seg_patches"
     / "images"
@@ -81,13 +81,13 @@ IMAGE_DIR = (
 
 MASK_DIR = (
     BASE_DIR
-    / "seg_masks"
+    / "data" / "08_segmentation_unet" / "seg_masks"
     / "03JUN2026"
     / "seg_patches"
     / "masks"
 )
 
-OUTPUT_DIR = BASE_DIR / "unet_output_256"
+OUTPUT_DIR = BASE_DIR / "data" / "08_segmentation_unet" / "unet_output_256"
 
 # IMPORTANT:
 # Only 256x256 patches are used.

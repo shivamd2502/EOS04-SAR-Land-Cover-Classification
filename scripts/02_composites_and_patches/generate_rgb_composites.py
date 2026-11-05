@@ -13,7 +13,7 @@
 #     OLD         : raw-DN baseline (R=HH_DN, G=HV_DN, B=HH/HV_DN) for comparison
 #
 # WHAT IT PRODUCED
-#   composites_L2B/03JUN2026/*.tif and the side-by-side figure
+#   data/02_composites_and_patches/composites_L2B/03JUN2026/*.tif and the side-by-side figure
 #   results/02_composites_and_patches/ALL_composites.png. The calibrated
 #   composites show terrain and urban areas much more clearly than the raw-DN baseline.
 #   Overview of all steps: README.md and docs/PIPELINE.md
@@ -286,7 +286,7 @@ def main(argv=None):
     p.add_argument("--hh-gamma0-db",  required=True)
     p.add_argument("--hv-gamma0-db",  required=True)
     p.add_argument("--lia", help="Local incidence angle tif (for swath test)")
-    p.add_argument("--output-dir", default="composites")
+    p.add_argument("--output-dir", default="data\\02_composites_and_patches\\composites")
     args = p.parse_args(argv)
 
     os.makedirs(args.output_dir, exist_ok=True)

@@ -14,14 +14,14 @@
 #
 # WHAT IT PRODUCED IN THIS PROJECT
 #   Scene E04_SAR_MRS_03JUN2026 (MRS mode, 18 m, HH+HV, Himachal Pradesh) ->
-#   calibrated_L2B/03JUN2026_HH and _HV: beta0 / sigma0 / gamma0 GeoTIFFs
+#   data/01_calibration/calibrated_L2B/03JUN2026_HH and _HV: beta0 / sigma0 / gamma0 GeoTIFFs
 #   (linear and dB). Every later step (composites, patches, features, labels)
 #   is built on these calibrated layers instead of raw DN.
 #
 # HOW TO RUN (from D:\ISRO_14)
 #   python scripts\01_calibration\eos04_radiometric_preprocessing.py --band-meta raw\<scene>\BAND_META.txt
 #          --image raw\<scene>\<HH>.tif --pol HH --product-level L2B --lia ... --mask ... --area ...
-#          --output-dir calibrated_L2B\03JUN2026_HH --undo-normalization
+#          --output-dir data/01_calibration/calibrated_L2B\03JUN2026_HH --undo-normalization
 #   python scripts\01_calibration\eos04_radiometric_preprocessing.py --self-test   (math check, no data)
 #   The formulas are listed in docs/EOS04_CALIBRATION_FORMULAS.md.
 #   Overview of all steps: README.md and docs/PIPELINE.md

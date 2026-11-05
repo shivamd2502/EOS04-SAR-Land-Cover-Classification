@@ -17,8 +17,8 @@
 #   SAR features.
 #
 # WHAT IT PRODUCED (03 June 2026 scene, OPT1_sigma0)
-#   patches_L2B (256 px, 4.6 km), patches_224_L2B, patches_64_L2B,
-#   patches_256_L2B_DEM with .shp files, which were labelled in QGIS:
+#   data/02_composites_and_patches/patches_L2B (256 px, 4.6 km), data/02_composites_and_patches/patches_224_L2B, data/02_composites_and_patches/patches_64_L2B,
+#   data/02_composites_and_patches/patches_256_L2B_DEM with .shp files, which were labelled in QGIS:
 #   256 px -> 999 labelled, 224 px -> 1,307, 64 px -> 11,663.
 #   Run with --patch-size / --stride / --dem-dir (see the argparse help).
 #   Overview of all steps: README.md and docs/PIPELINE.md

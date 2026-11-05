@@ -10,7 +10,7 @@
 #   the thresholds and optional morphological cleaning after them.
 #
 # WHAT IT PRODUCED
-#   seg_masks/03JUN2026/full_scene_mask.tif and paired image/mask patches:
+#   data/08_segmentation_unet/seg_masks/03JUN2026/full_scene_mask.tif and paired image/mask patches:
 #   808 at 256 px (seg_patches) and 3,358 at 128 px (seg_patches_128).
 #   Overview of all steps: README.md and docs/PIPELINE.md
 # ============================================================================
@@ -115,21 +115,21 @@ BASE_DIR = r"D:\ISRO_14"
 
 COMPOSITE = os.path.join(
     BASE_DIR,
-    "composites_L2B",
+    "data", "02_composites_and_patches", "composites_L2B",
     "03JUN2026",
     "OPT1_R-HH-sigma0_G-HV-sigma0_B-ratio-sigma0.tif"
 )
 
 MASK_TIF = os.path.join(
     BASE_DIR,
-    "raw",
+    "data", "00_input", "raw",
     "E04_SAR_MRS_03JUN2026_154005259612_23736_STUC00ZTD_32242_8_DH_D_R_N31497_E076829",
     "E04_SAR_MRS_03JUN2026_154005259612_23736_STUC00ZTD_32242_8_DH_D_R_N31497_E076829_mask.tif"
 )
 
 OUTPUT_DIR = os.path.join(
     BASE_DIR,
-    "seg_masks",
+    "data", "08_segmentation_unet", "seg_masks",
     "03JUN2026"
 )
 

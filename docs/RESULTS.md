@@ -30,11 +30,11 @@ artefacts" is not visible in accuracy: 224 px has the lowest value, 93.89 %.
 | Only this model correct | 5 | 1 |
 
 McNemar χ² = 1.5, p = 0.22: no significant difference, and the direction favours SAR-only.
-The separate DEM training run (`model/EOS04_256_L2B_DEM`, 93.5 %, epoch 56) agrees with this.
+The separate DEM training run (`data/05_classification_training/models/EOS04_256_L2B_DEM`, 93.5 %, epoch 56) agrees with this.
 
 `prove_dem_improvement.py` reports the opposite (+1.0 point, "Urban precision 1.000"), but it
 compares **hand-typed metrics of two unrelated runs**:
-* "with DEM" is in fact `model/EOS04_L2B`, which has only the 4 SAR features;
+* "with DEM" is in fact `data/05_classification_training/models/EOS04_L2B`, which has only the 4 SAR features;
 * "without DEM" is an earlier pre-L2B run, with an estimated confusion matrix.
 
 Its output should not be cited.
@@ -84,10 +84,10 @@ cross-check (method 2) was not run.
   Sentinel-2 NDVI would be the real test.
 * **One scene, one random split.** Neighbouring patches can fall into train and val, so
   validation accuracy is likely optimistic. A spatially blocked split, or a second date
-  (the 17 May 2026 scene is in `raw/`), would be a stronger test.
+  (the 17 May 2026 scene is in `data/00_input/raw/`), would be a stronger test.
 * **RVI is constant.** `rvi_mean` is constant for OPT1 (mean 0, std 1e-6 in every
   `feature_stats.json`), so the "4 SAR features" are effectively 3.
-* **The DEM features of the 224 px model are all zero** (`model/EOS04_224_L2B/feature_stats.json`).
+* **The DEM features of the 224 px model are all zero** (`data/05_classification_training/models/EOS04_224_L2B/feature_stats.json`).
 
 ## 8. Paper drafts and resume (local files, not in this repository)
 

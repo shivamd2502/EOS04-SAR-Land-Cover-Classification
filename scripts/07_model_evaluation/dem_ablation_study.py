@@ -72,13 +72,13 @@ log = logging.getLogger("ablation")
 BASE_DIR = r"D:\ISRO_14"
 
 PATCHES_ROOT = os.path.join(
-    BASE_DIR, "patches_256_L2B_DEM", "03JUN2026"
+    BASE_DIR, "data", "02_composites_and_patches", "patches_256_L2B_DEM", "03JUN2026"
 )
 
 COMPOSITE = "OPT1_sigma0"
 
 OUTPUT_DIR = os.path.join(
-    BASE_DIR, "model", "ablation_study"
+    BASE_DIR, "data", "07_model_evaluation", "ablation_study"
 )
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)

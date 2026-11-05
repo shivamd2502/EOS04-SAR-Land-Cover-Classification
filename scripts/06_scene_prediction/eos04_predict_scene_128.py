@@ -8,8 +8,8 @@
 #   The 64 px and 224 px maps were made the same way by changing PATCH_SIZE and MODEL_DIR.
 #
 # WHAT IT PRODUCED
-#   predictions_128_L2B: 4,941 patches (3,008 / 1,054 / 879);
-#   predictions_224_L2B: 1,638; predictions_64_L2B: 19,391.
+#   data/06_scene_prediction/predictions_128_L2B: 4,941 patches (3,008 / 1,054 / 879);
+#   data/06_scene_prediction/predictions_224_L2B: 1,638; data/06_scene_prediction/predictions_64_L2B: 19,391.
 #   Overview of all steps: README.md and docs/PIPELINE.md
 # ============================================================================
 """
@@ -106,10 +106,10 @@ except ImportError:
 # =============================================================================
 BASE_DIR      = r"D:\ISRO_14"
 COMPOSITE_TIF = os.path.join(
-    BASE_DIR, "composites_L2B", "03JUN2026",
+    BASE_DIR, "data", "02_composites_and_patches", "composites_L2B", "03JUN2026",
     "OPT1_R-HH-sigma0_G-HV-sigma0_B-ratio-sigma0.tif")
-MODEL_DIR     = os.path.join(BASE_DIR, "model", "EOS04_128_L2B")
-OUTPUT_DIR    = os.path.join(BASE_DIR, "predictions_128_L2B", "03JUN2026")
+MODEL_DIR     = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_128_L2B")
+OUTPUT_DIR    = os.path.join(BASE_DIR, "data", "06_scene_prediction", "predictions_128_L2B", "03JUN2026")
 
 PATCH_SIZE    = 128     # ← key change from 256 version
 BATCH_SIZE    = 64      # can be higher than 256 version (smaller patches)

@@ -10,7 +10,7 @@
 #   the class and confidence back into GeoTIFFs that open directly in QGIS.
 #
 # WHAT IT PRODUCED (256 px L2B model)
-#   predictions_L2B/03JUN2026: 1,262 patches -> Dense_forest 716, Mix 321,
+#   data/06_scene_prediction/predictions_L2B/03JUN2026: 1,262 patches -> Dense_forest 716, Mix 321,
 #   Urban 225; prediction_classmap.tif, prediction_confidence.tif,
 #   prediction_rgb.png, prediction_report.csv (see results/06_scene_prediction/).
 #   Set MODEL_DIR / OUTPUT_DIR / composite path in the configuration block below.
@@ -107,10 +107,10 @@ except ImportError:
 # =============================================================================
 BASE_DIR       = r"D:\ISRO_14"
 COMPOSITE_TIF  = os.path.join(
-    BASE_DIR, "composites", "03JUN2026",
+    BASE_DIR, "data", "02_composites_and_patches", "composites", "03JUN2026",
     "OPT1_R-HH-sigma0_G-HV-sigma0_B-ratio-sigma0.tif")
-MODEL_DIR      = os.path.join(BASE_DIR, "model", "EOS04")
-OUTPUT_DIR     = os.path.join(BASE_DIR, "predictions", "03JUN2026")
+MODEL_DIR      = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04")
+OUTPUT_DIR     = os.path.join(BASE_DIR, "data", "06_scene_prediction", "predictions", "03JUN2026")
 
 PATCH_SIZE     = 256
 BATCH_SIZE     = 32

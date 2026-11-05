@@ -27,8 +27,8 @@ import pandas as pd
 import os
 
 # ── EDIT THESE TWO PATHS ──────────────────────────────────────────────────────
-INPUT_PATH  = r"D:\ISRO_14\patches_64_L2B\03JUN2026\OPT1_sigma0\OPT1_sigma0_labels_clean.csv"
-OUTPUT_PATH = r"D:\ISRO_14\patches_64_L2B\03JUN2026\OPT1_sigma0\OPT1_sigma0_labels_clean.csv"
+INPUT_PATH  = r"D:\ISRO_14\data\02_composites_and_patches\patches_64_L2B\03JUN2026\OPT1_sigma0\OPT1_sigma0_labels_clean.csv"
+OUTPUT_PATH = r"D:\ISRO_14\data\02_composites_and_patches\patches_64_L2B\03JUN2026\OPT1_sigma0\OPT1_sigma0_labels_clean.csv"
 # ─────────────────────────────────────────────────────────────────────────────
 
 # These are the correct column names in the order QGIS exports them

@@ -8,7 +8,7 @@
 #   covers and give about 4x more training samples from the same scene.
 #
 # WHAT IT PRODUCED
-#   patches_128_L2B/03JUN2026/... PNGs + Shapefiles; 3,910 patches were labelled
+#   data/02_composites_and_patches/patches_128_L2B/03JUN2026/... PNGs + Shapefiles; 3,910 patches were labelled
 #   in QGIS and used by scripts/05_classification_training/eos04_train_128.py.
 #   Overview of all steps: README.md and docs/PIPELINE.md
 # ============================================================================

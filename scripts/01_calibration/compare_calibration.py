@@ -331,7 +331,7 @@ def main(argv=None):
                     help="Original DN GeoTIFF (hh.tif)")
     p.add_argument("--mask",       help="Layover/shadow mask GeoTIFF (optional)")
     p.add_argument("--pol",        required=True)
-    p.add_argument("--output-dir", default="calibrated\\comparison")
+    p.add_argument("--output-dir", default="data\\01_calibration\\calibrated\\comparison")
     args = p.parse_args(argv)
 
     os.makedirs(args.output_dir, exist_ok=True)

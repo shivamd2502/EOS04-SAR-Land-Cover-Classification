@@ -5,7 +5,7 @@
 #
 # WHY THIS STEP
 #   First comparison of the two patch sizes on the earlier (pre-L2B) models
-#   model/EOS04 (256 px, 93.5 %) and model/EOS04_128 (128 px, 91.3 %): per-class
+#   data/05_classification_training/models/EOS04 (256 px, 93.5 %) and data/05_classification_training/models/EOS04_128 (128 px, 91.3 %): per-class
 #   metrics, curves and confidence.
 #
 # WHAT IT PRODUCED
@@ -66,9 +66,9 @@ from pathlib import Path
 # PATHS  — edit if needed
 # ─────────────────────────────────────────────────────────────────────────────
 BASE_DIR    = r"D:\ISRO_14"
-MODEL_256   = os.path.join(BASE_DIR, "model", "EOS04")        # 256x256 model
-MODEL_128   = os.path.join(BASE_DIR, "model", "EOS04_128")    # 128x128 model
-OUT_DIR     = os.path.join(BASE_DIR, "model", "comparison")
+MODEL_256   = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04")        # 256x256 model
+MODEL_128   = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_128")    # 128x128 model
+OUT_DIR     = os.path.join(BASE_DIR, "data", "07_model_evaluation", "comparison")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # Hardcoded results from your training logs

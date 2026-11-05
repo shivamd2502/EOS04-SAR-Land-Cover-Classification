@@ -17,9 +17,9 @@
 #   * Stratified 80/20 split with a fixed seed, 100 epochs, LR 1e-4, batch 16, 224 px input.
 #
 # WHAT IT PRODUCED (OPT1_sigma0, 03 June 2026 scene; PATCHES_ROOT / MODEL_DIR edited per run)
-#   256 px -> model/EOS04_L2B     val acc 94.50 % (epoch 54, 200 val patches)
-#   224 px -> model/EOS04_224_L2B val acc 93.89 % (epoch 72, 262 val patches)
-#   64 px  -> model/EOS04_64_L2B  val acc 94.17 % (epoch 34, 2,333 val patches)
+#   256 px -> data/05_classification_training/models/EOS04_L2B     val acc 94.50 % (epoch 54, 200 val patches)
+#   224 px -> data/05_classification_training/models/EOS04_224_L2B val acc 93.89 % (epoch 72, 262 val patches)
+#   64 px  -> data/05_classification_training/models/EOS04_64_L2B  val acc 94.17 % (epoch 34, 2,333 val patches)
 #   Figures: results/05_classification_training/<model>/. Currently set to 224 px.
 #
 #   CAVEAT: labels come from hh_hv_rat thresholds and hh_hv_rat is also a model
@@ -116,8 +116,8 @@ import torchvision.models as models
 # CONFIG  — edit paths here to match your machine
 # =============================================================================
 BASE_DIR      = r"D:\ISRO_14"                        # root project folder
-PATCHES_ROOT = os.path.join(BASE_DIR, "patches_224_L2B", "03JUN2026")
-MODEL_DIR    = os.path.join(BASE_DIR, "model", "EOS04_224_L2B")
+PATCHES_ROOT = os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_224_L2B", "03JUN2026")
+MODEL_DIR    = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_224_L2B")
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # Composites available — each must have a labels_clean.csv inside its folder

@@ -11,7 +11,7 @@
 #   Copernicus_DSM *.tif files out of each ZIP without extracting everything.
 #
 # WHAT IT PRODUCED
-#   DEM/ (50 ZIPs) -> DEM_TIFS/ (50 GeoTIFF tiles), used by composite_to_patches.py
+#   data/00_input/DEM/ (50 ZIPs) -> data/03_dem_terrain/DEM_TIFS/ (50 GeoTIFF tiles), used by composite_to_patches.py
 #   (--dem-dir) to compute dem_mean, slp_mean, slp_std, slp_max, slp_p15.
 #   Tile inventory: results/03_dem_terrain/dem_tile_inventory.csv.
 #   Overview of all steps: README.md and docs/PIPELINE.md
@@ -46,9 +46,9 @@ import shutil
 # CONFIGURATION
 # ============================================================
 
-SOURCE_DIR = Path(r"D:\ISRO_14\DEM")
+SOURCE_DIR = Path(r"D:\ISRO_14\data\00_input\DEM")
 
-OUTPUT_DIR = Path(r"D:\ISRO_14\DEM_TIFS")
+OUTPUT_DIR = Path(r"D:\ISRO_14\data\03_dem_terrain\DEM_TIFS")
 
 
 # ============================================================
@@ -123,8 +123,8 @@ def collect_dem_files():
 
         print("\nERROR: No ZIP files found.")
         print("\nExpected structure:")
-        print(r"D:\ISRO_14\DEM\1.zip")
-        print(r"D:\ISRO_14\DEM\2.zip")
+        print(r"D:\ISRO_14\data\00_input\DEM\1.zip")
+        print(r"D:\ISRO_14\data\00_input\DEM\2.zip")
         print(r"...")
 
         return

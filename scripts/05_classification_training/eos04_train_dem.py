@@ -12,7 +12,7 @@
 #   docstring below.
 #
 # WHAT IT PRODUCED
-#   model/EOS04_256_L2B_DEM: 1,000 patches (800 / 200), val acc 93.5 % at
+#   data/05_classification_training/models/EOS04_256_L2B_DEM: 1,000 patches (800 / 200), val acc 93.5 % at
 #   epoch 56 (training_summary.json). The raw label "Hilly" is mapped to Dense_forest here.
 #   The controlled comparison is scripts/07_model_evaluation/dem_ablation_study.py:
 #   on the identical split, SAR-only reached 94.0 % and SAR+DEM 92.0 %
@@ -146,13 +146,13 @@ BASE_DIR = r"D:\ISRO_14"
 
 PATCHES_ROOT = os.path.join(
     BASE_DIR,
-    "patches_256_L2B_DEM",
+    "data", "02_composites_and_patches", "patches_256_L2B_DEM",
     "03JUN2026",
 )
 
 MODEL_DIR = os.path.join(
     BASE_DIR,
-    "model",
+    "data", "05_classification_training", "models",
     "EOS04_256_L2B_DEM",
 )
 

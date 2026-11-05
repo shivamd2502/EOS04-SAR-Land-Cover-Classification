@@ -10,7 +10,7 @@
 #   The metrics below are typed in by hand, not loaded from checkpoints.
 #   "Model A" (93.5 %, epoch 66) is the earlier pre-L2B 256 px run, and its
 #   confusion matrix is estimated from precision/recall. The "Model B" numbers
-#   (94.5 %, epoch 54) are those of model/EOS04_L2B, whose feature_stats.json
+#   (94.5 %, epoch 54) are those of data/05_classification_training/models/EOS04_L2B, whose feature_stats.json
 #   contains only the 4 SAR features, so they are not a DEM model. The two runs
 #   also differ in calibration and data. The valid test is dem_ablation_study.py,
 #   which found no significant DEM effect (p = 0.22).
@@ -144,7 +144,7 @@ MODEL_B = {
 }
 
 BASE_DIR   = r"D:\ISRO_14"
-OUTPUT_DIR = os.path.join(BASE_DIR, "validation", "dem_proof")
+OUTPUT_DIR = os.path.join(BASE_DIR, "data", "07_model_evaluation", "dem_proof")
 
 
 # =============================================================================

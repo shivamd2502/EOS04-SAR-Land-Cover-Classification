@@ -79,7 +79,7 @@ BASE_DIR = Path(r"D:\ISRO_14")
 
 IMAGE_DIR = (
     BASE_DIR
-    / "seg_masks"
+    / "data" / "08_segmentation_unet" / "seg_masks"
     / "03JUN2026"
     / "seg_patches"
     / "images"
@@ -87,7 +87,7 @@ IMAGE_DIR = (
 
 MASK_DIR = (
     BASE_DIR
-    / "seg_masks"
+    / "data" / "08_segmentation_unet" / "seg_masks"
     / "03JUN2026"
     / "seg_patches"
     / "masks"
@@ -99,7 +99,7 @@ MASK_DIR = (
 
 MODEL_PATH = (
     BASE_DIR
-    / "unet_output_256"
+    / "data" / "08_segmentation_unet" / "unet_output_256"
     / "best_unet_eos04_256.pth"
 )
 
@@ -109,7 +109,7 @@ MODEL_PATH = (
 
 OUTPUT_DIR = (
     BASE_DIR
-    / "unet_evaluation_256"
+    / "data" / "08_segmentation_unet" / "unet_evaluation_256"
 )
 
 PREDICTION_DIR = (

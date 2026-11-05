@@ -8,8 +8,8 @@
 #   (finer spatial detail, about 4x more samples) to study the effect of patch size.
 #
 # WHAT IT PRODUCED
-#   model/EOS04_128_L2B: 3,910 patches (782 val), val acc 93.99 % at epoch 22.
-#   An earlier run on the pre-L2B composites (model/EOS04_128) had 4 classes
+#   data/05_classification_training/models/EOS04_128_L2B: 3,910 patches (782 val), val acc 93.99 % at epoch 22.
+#   An earlier run on the pre-L2B composites (data/05_classification_training/models/EOS04_128) had 4 classes
 #   declared, one of them empty, and reached 91.3 %.
 #   Overview of all steps: README.md and docs/PIPELINE.md
 # ============================================================================
@@ -93,8 +93,8 @@ import torchvision.models as models
 # =============================================================================
 BASE_DIR      = r"D:\ISRO_14"                        # root project folder
 # CHANGE THESE TWO LINES
-PATCHES_ROOT = os.path.join(BASE_DIR, "patches_128_L2B", "03JUN2026")
-MODEL_DIR    = os.path.join(BASE_DIR, "model", "EOS04_128_L2B")
+PATCHES_ROOT = os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_128_L2B", "03JUN2026")
+MODEL_DIR    = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_128_L2B")
 os.makedirs(MODEL_DIR, exist_ok=True)
 
 # Composites available — each must have a labels_clean.csv inside its folder

@@ -99,32 +99,32 @@ PIXEL_SIZE_M = 18   # EOS-04 MRS pixel = 18 m
 # Each entry: patch_size → (patches_root, model_dir)
 MODEL_CONFIG = {
     64:  {
-        "patches_root": os.path.join(BASE_DIR, "patches_64_L2B",  "03JUN2026"),
-        "model_dir":    os.path.join(BASE_DIR, "model", "EOS04_64_L2B"),
+        "patches_root": os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_64_L2B",  "03JUN2026"),
+        "model_dir":    os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_64_L2B"),
         "label":        "64×64",
         "ground_km":    f"{64*PIXEL_SIZE_M/1000:.2f}km × {64*PIXEL_SIZE_M/1000:.2f}km",
     },
     128: {
-        "patches_root": os.path.join(BASE_DIR, "patches_128_L2B", "03JUN2026"),
-        "model_dir":    os.path.join(BASE_DIR, "model", "EOS04_128_L2B"),
+        "patches_root": os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_128_L2B", "03JUN2026"),
+        "model_dir":    os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_128_L2B"),
         "label":        "128×128",
         "ground_km":    f"{128*PIXEL_SIZE_M/1000:.2f}km × {128*PIXEL_SIZE_M/1000:.2f}km",
     },
     224: {
-        "patches_root": os.path.join(BASE_DIR, "patches_224_L2B", "03JUN2026"),
-        "model_dir":    os.path.join(BASE_DIR, "model", "EOS04_224_L2B"),
+        "patches_root": os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_224_L2B", "03JUN2026"),
+        "model_dir":    os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_224_L2B"),
         "label":        "224×224",
         "ground_km":    f"{224*PIXEL_SIZE_M/1000:.2f}km × {224*PIXEL_SIZE_M/1000:.2f}km",
     },
     256: {
-        "patches_root": os.path.join(BASE_DIR, "patches_L2B",     "03JUN2026"),
-        "model_dir":    os.path.join(BASE_DIR, "model", "EOS04_L2B"),
+        "patches_root": os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_L2B",     "03JUN2026"),
+        "model_dir":    os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_L2B"),
         "label":        "256×256",
         "ground_km":    f"{256*PIXEL_SIZE_M/1000:.2f}km × {256*PIXEL_SIZE_M/1000:.2f}km",
     },
 }
 
-OUTPUT_DIR = os.path.join(BASE_DIR, "model", "ALL_STATS_L2B")
+OUTPUT_DIR = os.path.join(BASE_DIR, "data", "07_model_evaluation", "ALL_STATS_L2B")
 
 
 # =============================================================================

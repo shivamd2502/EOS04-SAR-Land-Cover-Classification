@@ -123,10 +123,10 @@ DEFAULT_PATCH_SIZE = 256
 
 # Patch folder map (same as collect_all_model_stats.py)
 PATCH_FOLDER_MAP = {
-    64:  os.path.join(BASE_DIR, "patches_64_L2B",  "03JUN2026", "OPT1_sigma0"),
-    128: os.path.join(BASE_DIR, "patches_128_L2B", "03JUN2026", "OPT1_sigma0"),
-    224: os.path.join(BASE_DIR, "patches_224_L2B", "03JUN2026", "OPT1_sigma0"),
-    256: os.path.join(BASE_DIR, "patches_L2B",     "03JUN2026", "OPT1_sigma0"),
+    64:  os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_64_L2B",  "03JUN2026", "OPT1_sigma0"),
+    128: os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_128_L2B", "03JUN2026", "OPT1_sigma0"),
+    224: os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_224_L2B", "03JUN2026", "OPT1_sigma0"),
+    256: os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches_L2B",     "03JUN2026", "OPT1_sigma0"),
 }
 
 # Scene bounding box (from your BAND_META: scene centre 31.497°N 76.829°E)
@@ -134,7 +134,7 @@ PATCH_FOLDER_MAP = {
 SCENE_BBOX = [76.0, 31.0, 77.6, 32.0]   # [west, south, east, north]
 SCENE_DATE = "2026-06-03"
 
-OUTPUT_DIR  = os.path.join(BASE_DIR, "validation", "label_validation")
+OUTPUT_DIR  = os.path.join(BASE_DIR, "data", "04_label_validation", "label_validation")
 SAMPLES_PER_CLASS = 100   # patches to show in visual montage
 RANDOM_SEED = 42
 

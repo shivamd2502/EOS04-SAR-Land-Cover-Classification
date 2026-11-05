@@ -113,7 +113,8 @@ pip install -r requirements.txt   # for a GPU, install torch/torchvision first f
 python scripts\01_calibration\eos04_radiometric_preprocessing.py --self-test
 ```
 
-The scripts use the project root `BASE_DIR = r"D:\ISRO_14"` in their configuration blocks.
+The scripts use the project root `BASE_DIR = r"D:\ISRO_14"` and read and write their data in
+`BASE_DIR\data\00_input … 08_segmentation_unet`, numbered like `scripts/` and `results/`.
 Clone to that path, or edit `BASE_DIR` at the top of each script. Run them from the project
 root in folder order (01 → 08). The data layout and where to get the EOS-04 products are
 described in [docs/DATA.md](docs/DATA.md).

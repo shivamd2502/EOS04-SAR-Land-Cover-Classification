@@ -111,13 +111,13 @@ log = logging.getLogger("fair_compare")
 # DEFAULT PATHS  — edit to match your machine
 # ─────────────────────────────────────────────────────────────────────────────
 BASE_DIR     = r"D:\ISRO_14"
-VAL_CSV      = os.path.join(BASE_DIR, "patches",     "03JUN2026",
+VAL_CSV      = os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches",     "03JUN2026",
                              "OPT1_sigma0", "OPT1_sigma0_labels_clean.csv")
-PATCHES_256  = os.path.join(BASE_DIR, "patches",     "03JUN2026",
+PATCHES_256  = os.path.join(BASE_DIR, "data", "02_composites_and_patches", "patches",     "03JUN2026",
                              "OPT1_sigma0", "patches")
-MODEL_DIR_256 = os.path.join(BASE_DIR, "model", "EOS04")
-MODEL_DIR_128 = os.path.join(BASE_DIR, "model", "EOS04_128")
-OUTPUT_DIR   = os.path.join(BASE_DIR, "model", "comparison")
+MODEL_DIR_256 = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04")
+MODEL_DIR_128 = os.path.join(BASE_DIR, "data", "05_classification_training", "models", "EOS04_128")
+OUTPUT_DIR   = os.path.join(BASE_DIR, "data", "07_model_evaluation", "comparison")
 
 PATCH_256    = 256
 PATCH_128    = 128
